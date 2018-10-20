@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kim Stray</title>
+	<link rel="stylesheet" href="css/kim.css">
+	<link href="css/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+	
+	<script src="js/jquery-1.6.3.min.js"></script>
+	<script src="js/jquery.skitter.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script>
+	
+	
+	$(document).ready(function() {
+		
+		var options = {};
+	
+		if (document.location.search) {
+			var array = document.location.search.split('=');
+			var param = array[0].replace('?', '');
+			var value = array[1];
+			
+			if (param == 'animation') {
+				options.animation = value;
+			}
+			else if (param == 'type_navigation') {
+				if (value == 'dots_preview') {
+					$('.border_box').css({'marginBottom': '40px'});
+					options['dots'] = true;
+					options['preview'] = true;
+				}
+				else {
+					options[value] = true;
+					if (value == 'dots') $('.border_box').css({'marginBottom': '40px'});
+				}
+			}
+		}
+		
+		$('.box_skitter_large').skitter(options);
+		
+		// Highlight
+		$('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
+		
+	});
+	</script>
+	
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<div id="logo">
+			<img src="images/logo.png">
+			<h1>Bungou Stray Dogs</h1>
+			<p>"My favorite Anime!"</p>
+		</div>
+		<div id="contacts">
+				<h1>Contact Us</h1>
+			<marquee><h2>09123456789</h2></marquee>
+		</div>
+	</div>
+	<div id="flash">
+		 <div class="box_skitter box_skitter_large" style= " z-index:0;">
+				<ul>
+					<li><a href="#blindHeight"><img src="images/1.jpg" class="random" style="width:100%;height:450px;"/></a></li>
+					<li><a href="#blindWidth"><img src="images/2.jpg" class="random" style="width:100%;height:450px;"/></a></li>
+					<li><a href="#blindHeight"><img src="images/3.jpg" class="random" style="width:100%;height:450px;"/></a></li>
+					<li><a href="#blindWidth"><img src="images/4.jpg" class="random" style="width:100%;height:450px;"/></a></li>
+					
+					</ul>
+			</div>
+	</div>
+	<div id="navbar">
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="about.html#navbar">ABOUT US</a></li>
+				<li><a href="services.html#navbar">SERVICES</a></li>
+				<li><a href="contact.html#navbar">CONTACT US</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="main-content">
+		<div id="side-bar">
+			<div id="upper">
+				<img src="images/6.jpg" width="100%" height="197">
+			</div>
+			<div id="lower">
+				<img src="images/8.jpg" width="100%" height="197">
+			</div>
+		</div>
+		<div id="contents">
+			<img src="images/5.jpg" width="25%" height="27%" align="left-top">
+			<img src="images/7.jpg" width="25%" height="27%" align="left-bottom">
+			<img src="images/5.jpg" width="25%" height="27%" align="right-top"><br><br>
+			<h1>ABOUT US</h1><br>
+			<ul>
+				<li>WHO ARE WE?</li>
+				<li>OUR SKILLS</li>
+				<li>WE ARE STRONG</li>
+				<li>OUR GOAL</li>
+			</ul>
+			<p>
+				 Bungo Stray Dogs (文豪ストレイドッグス Bungō Sutorei Doggusu, lit. Literary Stray Dogs) is a Japanese manga series written by Kafka Asagiri and illustrated by Sango Harukawa, which has been serialized in the magazine Young Ace since 2012. An anime television series adaptation by Bones aired in 2016 in two parts, the first part aired between April 7, 2016 and June 23, 2016, and the second part aired between October 6, 2016 and December 22, 2016.
+			</p>
+		</div>
+	</div>
+	<div id="footer">
+				<ul id="icons">
+				<li><a href="www.http://facebook.com" target="_blank"><img src="images/facebook.png"></a></li>
+				<li><a href="www.http://twitter.com" target="_blank"><img src="images/twitter.png"></a></li>
+				<li><a href="www.http://instagram.com" target="_blank"><img src="images/instagram.png"></a></li>
+				<li><a href="www.http://youtube.com" target="_blank"><img src="images/youtube.png"></a></li>
+				
+			</ul>
+	</div>
+	
+</div>
+</body>
+</html>
